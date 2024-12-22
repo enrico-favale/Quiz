@@ -1,0 +1,89 @@
+/* Stili generali */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem; /* Titolo grande e accattivante */
+    font-weight: bold;
+    color: var(--gold); /* Colore oro per evidenziare il titolo */
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00; /* Effetto brillante */
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Spaziatura uniforme tra gli elementi */
+    width: 100%;
+    max-width: 400px; /* Dimensione massima della sezione principale */
+}
+
+#results-box {
+    width: 100%; /* Larghezza fissa per tutti i box */
+    max-width: 400px; /* Massimo 400px */
+    border: 2px solid var(--gold); /* Colore oro per coerenza */
+    background-color: var(--bg_secondary); /* Sfondo con contrasto medio */
+    padding: 10px 0;
+    border-radius: 10px; /* Angoli arrotondati */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombra per profondità */
+}
+
+h2 {
+    font-size: 2rem; /* Titolo grande e accattivante */
+    font-weight: bold;
+    color: var(--gold); /* Colore oro per evidenziare il titolo */
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00; /* Effetto brillante */
+    margin-bottom: 5vh;
+}
+
+/* Pulsanti */
+#buttons-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spaziatura tra i pulsanti */
+    align-items: center;
+
+    width: 100%;
+}
+
+/* Stile del pulsante */
+#buttons-box button {
+    width: 100%; /* Larghezza piena */
+    max-width: 400px; /* Stessa larghezza degli altri box */
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--txt_main);
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombra */
+}
+
+/* Pulsante quiz cultura generale */
+#homepage-button {
+    background-color: #32cd32; /* Verde acceso */
+    border: 2px solid #228b22;
+}
+
+#homepage-button:hover {
+    background-color: #3cb371; /* Cambia colore al passaggio */
+    box-shadow: 0 6px 10px rgba(50, 205, 50, 0.5); /* Effetto hover */
+}
