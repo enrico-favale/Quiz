@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/welcome.css">
+
     <title>Quiz</title>
 </head>
 <body>
-    ciao
+    <header>
+        <h1>QUIZ</h1>
+    </header>
+
+    <main>
+        <div id="set-timer-box">
+            <p>Imposta la durata in secondi per ogni domanda</p>
+            <input type="number" id="timer-input" placeholder="Inserisci un numero" value="15" max="30">
+        </div>
+
+        <div id="start-buttons">
+            <button id="start-math-button">Inizia quiz matematico</button>
+            <button id="start-general-button">Inizia quiz cultura generale</button>
+        </div>
+    </main>
 </body>
 </html>
