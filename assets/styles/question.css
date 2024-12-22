@@ -1,0 +1,148 @@
+/* Stili generali */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--gold);
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00;
+    margin: 8vh;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100vw;
+}
+
+/* Box per la domanda */
+#question-box {
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid var(--gold);
+    background-color: var(--bg_secondary);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Box per le risposte */
+#answers-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Due colonne per le risposte */
+    gap: 15px;
+
+    width: 100%;
+    max-width: 70vw;
+
+    height: 100%;
+    max-height: 50vh;
+
+    align-items: center;
+    justify-items: center; /* Aggiunto per centrare gli elementi orizzontalmente */
+    grid-template-rows: auto auto; /* Due righe: una per il timer e una per le risposte */
+    grid-template-areas: 
+        "answer1 answer2"
+        "answer3 answer4"; /* Definiamo le aree della griglia */
+    position: relative;  /* Necessario per il posizionamento assoluto del timer */
+}
+
+/* Risposte */
+.answer {
+    width: 100%;
+    height: 20vh;
+    padding: 10px;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    
+    text-align: center;
+    color: var(--txt_main);
+}
+
+/* Risposte specifiche */
+#answer-1 {
+    grid-column: 1;
+    grid-row: 1;
+
+    background-color: #3498db;
+}
+
+#answer-2 {
+    grid-column: 2;
+    grid-row: 1;
+
+    background-color: #f39c12;
+}
+
+#answer-3 {
+    grid-column: 1;
+    grid-row: 2;
+
+    background-color: #ff4d4d;
+}
+
+#answer-4 {
+    grid-column: 2;
+    grid-row: 2;
+
+    background-color: #2ecc71;
+}
+
+.answer:hover {
+    opacity: 0.8; /* Leggero effetto hover */
+}
+
+/* Timer */
+#timer-box {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00;
+
+    position: absolute; /* Posizionamento assoluto per sovrapporre */
+    top: 50%;  /* Posiziona verticalmente al centro della griglia */
+    left: 50%;  /* Posiziona orizzontalmente al centro della griglia */
+    transform: translate(-50%, -50%); /* Centra esattamente */
+    z-index: 10;  /* Sovrappone agli altri elementi */
+
+    padding: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background-color: var(--bg_secondary);
+}
+
+#timer-box p {
+    margin: 0;
+}
+
+#timer {
+    width: fit-content;
+    text-align: center;
+}
