@@ -17,7 +17,15 @@ header h1 {
     font-weight: bold;
     color: var(--gold);
     text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00;
-    margin: 8vh;
+    margin: 5vh;
+}
+
+header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--gold);
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00;
+    margin: 3vh;
 }
 
 /* Main */

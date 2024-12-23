@@ -45,7 +45,7 @@ class Question {
 }
 
 function goToNextPage () {
-    if (parseInt(localStorage.getItem('currentQuestion')) > parseInt(localStorage.getItem('nQuestions'))) {
+    if (parseInt(localStorage.getItem('currentQuestion')) >= parseInt(localStorage.getItem('nQuestions'))) {
         window.location.href = 'results.html';
     } else {
         window.location.href = 'question.html';
@@ -61,6 +61,8 @@ addEventListener("DOMContentLoaded", (event) => {
 
     // Accesso al DOM
 
+    const questionNumberDisplay = document.getElementById('question-number');
+
     const questionDisplay = document.getElementById('question-text');
 
     const answer_1 = document.getElementById('answer-1');
@@ -71,6 +73,10 @@ addEventListener("DOMContentLoaded", (event) => {
     const answersDisplay = [answer_1, answer_2, answer_3, answer_4];
 
     const timerDisplay = document.getElementById('timer');
+
+    // Inizializza il contatore delle domande
+
+    questionNumberDisplay.textContent = localStorage.getItem('currentQuestion') + "/" + localStorage.getItem('nQuestions');
 
     // Inizializza domanda e risposte
 

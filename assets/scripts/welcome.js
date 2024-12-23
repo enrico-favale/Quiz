@@ -5,7 +5,7 @@ startButton.addEventListener('click', () => {
     console.log("Quiz iniziato!");
 
     localStorage.setItem('nQuestions', nQuestionsInput.value);
-    localStorage.setItem('currentQuestion', 1);
+    localStorage.setItem('currentQuestion', 0);
     localStorage.setItem('correctAnswers', 0);
 
     window.location.href = 'question.html';
