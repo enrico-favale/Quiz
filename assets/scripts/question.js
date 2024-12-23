@@ -45,14 +45,14 @@ class Question {
 }
 
 function goToNextPage () {
-    if (localStorage.getItem('currentQuestion') > localStorage.getItem('nQuestions')) {
+    if (parseInt(localStorage.getItem('currentQuestion')) > parseInt(localStorage.getItem('nQuestions'))) {
         window.location.href = 'results.html';
     } else {
         window.location.href = 'question.html';
     }
 }
 
-if (localStorage.getItem('currentQuestion') > localStorage.getItem('nQuestions')) {
+if (parseInt(localStorage.getItem('currentQuestion')) > parseInt(localStorage.getItem('nQuestions'))) {
     window.location.href = 'results.html';
 }
 addEventListener("DOMContentLoaded", (event) => {
