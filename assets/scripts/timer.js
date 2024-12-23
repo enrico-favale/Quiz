@@ -22,10 +22,11 @@ export class Counter {
 
 // Classe Timer per gestire il comportamento del timer
 export class Timer {
-    constructor(displayElement) {
+    constructor(displayElement, onTimeUp) {
         this.counter = new Counter();
         this.displayElement = displayElement;
         this.intervalId = null; // Riferimento all'intervallo del timer
+        this.onTimeUp = onTimeUp;
     }
 
     // Avvia il timer
@@ -36,6 +37,7 @@ export class Timer {
 
                 if (this.counter.seconds <= 0) {
                     this.pause();
+                    this.onTimeUp();
                 }
 
                 this.updateDisplay();
