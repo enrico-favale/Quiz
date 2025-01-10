@@ -134,6 +134,9 @@ main {
     align-items: center;
     text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00;
 
+    width: 40px;
+    height: 40px;
+
     position: absolute; /* Posizionamento assoluto per sovrapporre */
     top: 50%;  /* Posiziona verticalmente al centro della griglia */
     left: 50%;  /* Posiziona orizzontalmente al centro della griglia */
@@ -146,11 +149,7 @@ main {
     background-color: var(--bg_secondary);
 }
 
-#timer-box p {
-    margin: 0;
-}
-
 #timer {
-    width: fit-content;
+    margin: 0;
     text-align: center;
 }

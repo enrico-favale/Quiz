@@ -29,7 +29,24 @@ main {
     justify-content: center;
     gap: 30px; /* Spaziatura uniforme tra gli elementi */
     width: 100%;
-    max-width: 400px; /* Dimensione massima della sezione principale */
+    max-width: 800px; /* Dimensione massima della sezione principale */
+}
+
+#results-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Spaziatura tra i box */
+    width: 100%;
+} 
+
+.coriandoli {
+    width: 200px;
+    height: 200px;
+}
+
+.coriandoli-dx {
+    transform: rotateY(180deg);
 }
 
 #results-box {
@@ -48,7 +65,29 @@ h2 {
     font-weight: bold;
     color: var(--gold); /* Colore oro per evidenziare il titolo */
     text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00; /* Effetto brillante */
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
+}
+
+#results-text {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+#msg-complimenti {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--txt_main);
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00; /* Effetto brillante */
+    margin-bottom: 2vh;
+}
+
+#msg-superamento {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--txt_main);
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ff8c00; /* Effetto brillante */
+    margin-bottom: 2vh;
 }
 
 /* Pulsanti */
